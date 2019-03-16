@@ -1,4 +1,12 @@
 /* CSS Main file */
+/*
+Color palette:
+#424661 (Navy blue ish)
+#a7cca4 (Teal green ish)
+#5d4a3c (Dark brown)
+#ab6c39 (Orange brown)
+#e7c7a2	(Beige)
+*/
 
 /* Global CSS */
 html {
@@ -76,7 +84,8 @@ h1 {
 
 
 
-/*body{
+body{
     background-image: url(img/backgroundBig.png);
     background-size: cover;
+    background-position: center center;
 } */
