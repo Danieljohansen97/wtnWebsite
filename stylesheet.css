@@ -95,11 +95,10 @@ h1 {
 }
 
 
-/*body{
-    background-image: url(img/backgroundBig.png);
-    background-size: cover;
-    background-position: center center;
-} */
+/* Background image/Taekkyeon Logo */
+#bgImage{
+    opacity: 0.5;
+}
 
 /* Media query Mobile phone */
 @media only screen and (max-width: 600px){
