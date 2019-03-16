@@ -11,12 +11,21 @@ Color palette:
 /* Global CSS */
 html {
     font-family: arial;
+    margin: 0;
+    padding: 0;
 }
+
+body{
+    padding: 0;
+    margin: 0;
+}
+
 h1 {
+    margin: 0;
     font-family: helvetica;
     text-align: center;
     font-size: 72px;
-    color: rosybrown;
+    color: #e7c7a2;
 }
 
 /* Grid view CSS */
@@ -33,7 +42,6 @@ h1 {
 [class*="col-"] {
     float: left;
     padding: 0px;
-    border: 1px solid black;
 }
 
 /* Column width designation */
@@ -51,41 +59,52 @@ h1 {
 .col-12 {width: 100%;}
 
 /* Header CSS */
+.header{
+    margin: 0;
+    padding: 0;
+    background-color: #424661;
+}
 
 /* Menu CSS */
 .nav ul {
     list-style-type: none;
     padding: 0;
+    margin: auto;
+    background-color: #424661;
 }
 .nav ul li {
     display: inline-block;
     
     padding: 1em;
-    margin: 0;
-    border: 2px solid black;
-    
-    background-color: rosybrown;
-    width: 33%;
-    min-width: 200px;
-    height: auto;
-    
+    margin: auto;
     text-align: center;
 }
-.nav ul li:hover {
-    background-color: black;
-    border-color: white;
+.nav ul li a:hover {
+    color: white;
+    animation: navLiHover 0.2s ease-in-out;
 }
 .nav ul li a {
     text-decoration: none;
-    color: white;
+    color: #e7c7a2;
     font-size: 32px;
     margin: auto;
 }
+@keyframes navLiHover{
+    0%{color: #e7c7a2;}
+    100%{color: white; bottom: 10%;}
+}
 
 
-
-body{
+/*body{
     background-image: url(img/backgroundBig.png);
     background-size: cover;
     background-position: center center;
 } */
+
+/* Media query Mobile phone */
+@media only screen and (max-width: 600px){
+    .nav ul li {
+        width: 100%;
+    }
+    
+}
