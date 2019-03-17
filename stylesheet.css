@@ -8,6 +8,7 @@ Color palette:
 #e7c7a2	(Beige)
 */
 
+
 /* Global CSS */
 html {
     font-family: arial;
@@ -22,11 +23,17 @@ body{
 
 h1 {
     margin: 0;
-    font-family: helvetica;
+    font-family: "Helvetica";
+    font-weight: 100;
     text-align: center;
-    font-size: 72px;
+    font-size: 64px;
     color: #e7c7a2;
+    padding-bottom: 20px;
 }
+
+#titleMobBr {
+        display: none;
+    }
 
 /* Grid view CSS */
 * {
@@ -65,7 +72,15 @@ h1 {
     background-color: #424661;
 }
 
+#koTitle{
+    font-size: 48px;
+}
+
 /* Menu CSS */
+#nav{
+    display: inline-block;
+}
+
 .nav ul {
     list-style-type: none;
     padding: 0;
@@ -86,12 +101,16 @@ h1 {
 .nav ul li a {
     text-decoration: none;
     color: #e7c7a2;
-    font-size: 32px;
+    font-size: 16px;
     margin: auto;
 }
 @keyframes navLiHover{
     0%{color: #e7c7a2;}
     100%{color: white; bottom: 10%;}
+}
+
+.smLink{
+    float: right;
 }
 
 
@@ -102,8 +121,74 @@ h1 {
 
 /* Media query Mobile phone */
 @media only screen and (max-width: 600px){
+    h1{
+        font-size: 56;
+    }
+    
+    /* Different menu type for mobile phones */
+    .container {
+        position: relative;
+        padding: 10px 0 10px 0;
+        width: 100%;
+        background-color: #424661;
+        display: inline-block;
+        cursor: pointer;
+        z-index: 2;
+        
+        
+    }
+
+    .bar1, .bar2, .bar3 {
+        width: 35px;
+        height: 5px;
+        background-color: #e7c7a2;
+        margin: 6px auto 0 auto;
+        transition: 0.3s;
+    }
+
+    /* Rotate first bar */
+    .change .bar1 {
+        -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+        transform: rotate(-45deg) translate(-9px, 6px) ;
+    }
+
+    /* Fade out the second bar */
+    .change .bar2 {
+        opacity: 0;
+    }
+
+    /* Rotate last bar */
+    .change .bar3 {
+        -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+        transform: rotate(45deg) translate(-8px, -8px) ;
+    }
+    
+    /* The actual menu that appears after clicking button  */
+    #nav{
+        z-index: 1;
+        position: relative;
+        display: none;
+        animation: slideDown 0.6s ease;
+    }
+    
+    /* Animation to make nav slide down */
+    @keyframes slideDown{
+        0%{top: -306px;}
+        100%{top: 0px;}
+    }
+    
+    /* Cleanupcode for positioning menu */
     .nav ul li {
         width: 100%;
+        background-color: #222641;
+        border-bottom: 1px solid black;
     }
+    #titleMobBr {
+        display: inline;
+    }
+    .smLink{
+        float: none;
+    }
+    
     
 }
