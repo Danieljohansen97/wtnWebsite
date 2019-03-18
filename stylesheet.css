@@ -31,6 +31,10 @@ h1 {
     padding-bottom: 20px;
 }
 
+h2 {
+    font-size: 32px;
+}
+
 #titleMobBr {
         display: none;
     }
@@ -113,6 +117,40 @@ h1 {
     float: right;
 }
 
+/* Form in contact page */
+.form {
+    display: inline-block;
+    text-align: center;
+    margin: auto;
+    align-content: center;
+}
+
+.inputField {
+    border: 1px solid black;
+    margin: 5px;
+    width: 12rem;
+    box-shadow: 1px 1px 2px black;
+}
+
+.inputField:hover {
+    border-color: blue;
+    background-color: #ddd;
+}
+
+.inputBtn {
+    width: 94px;
+    border: 2px solid black;
+    border-radius: 5%;
+    
+}
+
+#send:hover, #reset:hover {
+    background-color: #ddd;
+    border-color: #a7cca4;
+    box-shadow: 1px 1px 2px black;
+    cursor: pointer;
+    
+}
 
 /* Background image/Taekkyeon Logo */
 #bgImage{
@@ -189,6 +227,5 @@ h1 {
     .smLink{
         float: none;
     }
-    
     
 }
