@@ -156,6 +156,7 @@ h2 {
     margin: 5px;
     width: 12rem;
     box-shadow: 1px 1px 2px black;
+    text-align: center;
 }
 
 .inputField:hover {
@@ -190,16 +191,28 @@ h2 {
     float: left;
     margin: 10px;
     display: block;
+    border: 1px solid black;
 }
+
+#imageText1 {
+    float: top;
+    display: block;
+    margin: 10px;
+    position: relative;
+    top: 10px;
+    left: 10px;
+}
+
 .historyParagraph {
     display: block;
     width: 600px;
-    height: 500px;
+    height: 485px;
     margin: 10px;
     float: left;
     overflow: scroll;
-    
+    box-shadow: 0 0 5px black;
     font-size: 40px;
+    padding: 10px;
 }
 
 
@@ -214,10 +227,18 @@ h2 {
         margin: auto;
         float: none;
     }
+    
+    #imageText1 {
+        text-align: center;
+        float: none;
+        font-size: 12px;
+        position: inherit;
+    }
+    
     .historyParagraph {
         width: 80%;
         font-size: 16px;
-        
+        height: auto;
         float: none;
         margin: auto;
     }
